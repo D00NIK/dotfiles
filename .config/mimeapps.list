@@ -1,0 +1,14 @@
+[Default Applications]
+text/x-shellscript=text.desktop;
+text/plain=text.desktop;
+application/pdf=librewolf.desktop;
+image/png=img.desktop;
+image/jpeg=img.desktop;
+image/gif=img.desktop;
+video/x-matroska=video.desktop
+video/mp4=video.desktop
+text/html=librewolf.desktop
+x-scheme-handler/http=librewolf.desktop
+x-scheme-handler/https=librewolf.desktop
+x-scheme-handler/about=librewolf.desktop
+x-scheme-handler/unknown=librewolf.desktop

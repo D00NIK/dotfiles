@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=librewolf
+Comment=A firefox fork
+Terminal=false
+Exec=librewolf
+Categories=Network;WebBrowser
+MimeType=x-scheme-handler/unknown;x-scheme-handler/about;x-scheme-handler/https;x-scheme-handler/http;text/html;

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+ctl="systemctl"
+
+wmpid(){ # This function is needed if there are multiple instances of the window manager.
+	tree="$(pstree -ps $$)"
+	tree="${tree#*dwm(}"
+	echo "${tree%%)*}"
+}
+
+case "$(printf "🔒 lock\n♻️ renew dwm\n🔃 reboot\n🖥️shutdown\n💤 sleep" | dmenu -i -p 'Action: ')" in
+	'🔒 lock') slock ;;
+	"♻️ renew dwm") kill -HUP "$(wmpid)" ;;
+	'🔃 reboot') $ctl reboot -i ;;
+	'🖥️shutdown') $ctl poweroff -i ;;
+	'💤 sleep') slock $ctl suspend -i ;;
+	*) exit 1 ;;
+esac
