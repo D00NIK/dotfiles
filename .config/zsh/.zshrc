@@ -6,6 +6,10 @@ setopt interactive_comments
 # Aliases
 alias vim="nvim"
 alias ls="ls --color"
+alias c="clear"
+
+# Named Dirs
+hash -d vw=$HOME/.local/share/nvim/vimwiki
 
 # Basic auto/tab complete:
 autoload -U compinit
