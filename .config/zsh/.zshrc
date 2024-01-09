@@ -1,5 +1,5 @@
 autoload -U colors && colors # Load colors
-PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~ %{$reset_color%}$%b "
+PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M%{$reset_color%}:%{$fg[magenta]%}%~%{$reset_color%}$%b "
 stty stop undef # Disable ctrl-s to freeze terminal
 setopt interactive_comments
 
