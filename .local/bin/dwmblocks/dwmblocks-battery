@@ -2,12 +2,12 @@
 
 for battery in /sys/class/power_supply/BAT?*; do
 	case "$(cat "$battery/status" 2>&1)" in
-		"Full") status="⚡" ;;
+		"Full") status="󱐋" ;;
 		"Discharging") status="󰂂" ;;
 		"Charging") status="󰂄" ;;
 		*) exit 1 ;;
 	esac
 	capacity="$(cat "$battery/capacity" 2>&1)"
-	if [ "$status" = "󰂂" ] && [ "$capacity" -le 25 ] then $status = "󰂃" fi
-	printf "%s%d%%" "$status" "$capacity";
+	if [ "$status" = "󰂂" ] && [ "$capacity" -le 25 ]; then $status = "󰂃"; fi
+	printf "%s %d%%" "$status" "$capacity";
 done
