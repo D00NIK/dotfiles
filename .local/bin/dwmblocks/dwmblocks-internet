@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ "$(cat /sys/class/net/w*/operstate 2>/dev/null)" = 'up' ] ; then
-	wifiicon="$(awk '/^\s*w/ { print "ᯤ", int($3 * 100 / 70) "% " }' /proc/net/wireless)"
+	wifiicon="$(awk '/^\s*w/ { print "󱚽", int($3 * 100 / 70) "% " }' /proc/net/wireless)"
 else
-	wifiicon="📡"
+	wifiicon="󰖪"
 fi
 
 echo $wifiicon
