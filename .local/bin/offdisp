@@ -1,5 +1,0 @@
-#!/bin/sh
-
-if [[ $(xrandr --listactivemonitors | grep "DP-2") ]] then
-	xrandr --output eDP-1 --off
-fi
