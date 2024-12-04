@@ -1,6 +1,9 @@
 #!/bin/sh
 
-xrandr --output eDP-1 --mode 1920x1200 --dpi 96 &
+# defaults
+xrandr --output eDP-1 --dpi 192
+xwallpaper --zoom ~/.config/x11/wallpaper.jpg
+xset r rate 250 30
+setxkbmap -option caps:escape
+
 xcompmgr &
-setbg &
-remaps
