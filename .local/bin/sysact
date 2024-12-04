@@ -13,6 +13,6 @@ case "$(printf "󰌾 lock\n renew dwm\n󰜉 reboot\n⏻ shutdown\n󰤄 sleep"
 	' renew dwm') kill -HUP "$(wmpid)" ;;
 	'󰜉 reboot') $ctl reboot -i ;;
 	'⏻ shutdown') $ctl poweroff -i ;;
-	'󰤄 sleep') ondisp && slock $ctl suspend -i ;;
+	'󰤄 sleep') slock $ctl suspend -i ;;
 	*) exit 1 ;;
 esac
