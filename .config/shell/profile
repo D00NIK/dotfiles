@@ -8,7 +8,7 @@ unsetopt PROMPT_SP
 export EDITOR="nvim"
 export TERMINAL="st"
 export TERMINAL_PROG="st"
-export BROWSER="librewolf"
+export BROWSER="firefox"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -26,6 +26,10 @@ export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 
 export MOZ_USE_XINPUT2="1" # Mozilla smooth scrolling/touchpads.
+
+# HiDPI issues
+export QT_SCALE_FACTOR="2"
+export XCURSOR_SIZE="48"
 
 # Start graphical server on user's current tty if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
